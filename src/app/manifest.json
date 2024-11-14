@@ -1,0 +1,41 @@
+{
+    "metadataBase": "https://payflares.com",
+    "title": {
+        "template": "PayFlares %s - Sparking Creator Success, Fueling Fan Engagement",
+        "default": "Acme Dashboard"
+    },
+    "description": "Empower your favorite creators and engage with brands in meaningful ways through PayFlares' innovative platform for micro-transactions.",
+    "keywords": [
+        "creator monetization",
+        "micro-transactions",
+        "fan engagement",
+        "brand rewards",
+        "PayFlares"
+    ],
+    "referrer": "origin-when-cross-origin",
+    "openGraph": {
+        "title": "PayFlares - Sparking Creator Success, Fueling Fan Engagement",
+        "description": "Empower your favorite creators and engage with brands in meaningful ways through PayFlares' innovative platform for micro-transactions.",
+        "url": "https://payflares.com",
+        "type": "website",
+        "images": [
+            {
+                "url": "/logo.png",
+                "width": 800,
+                "height": 600,
+                "alt": "Support creators on PayFlares - a platform for micro-transactions and brand engagement"
+            }
+        ]
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "title": "PayFlares - Sparking Creator Success, Fueling Fan Engagement",
+        "description": "Support creators, earn rewards, and interact with brands in fun ways on PayFlares.",
+        "images": ["/logo.png"]
+    },
+    "formatDetection": {
+        "email": false,
+        "address": false,
+        "telephone": false
+    }
+}

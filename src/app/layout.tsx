@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next';
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
@@ -14,11 +14,16 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
-  title: "PayFlares - Sparking Creator Success, Fueling Fan Engagement",
+export const metadata: Metadata = {
+  metadataBase: new URL('https://payflares.com'),
+  title: {
+    template: "PayFlares %s - Sparking Creator Success, Fueling Fan Engagement",
+    default: 'Acme Dashboard',
+  },
   description: "Empower your favorite creators and engage with brands in meaningful ways through PayFlares' innovative platform for micro-transactions.",
   keywords: ["creator monetization", "micro-transactions", "fan engagement", "brand rewards", "PayFlares"],
-  
+  referrer: 'origin-when-cross-origin',
+
   openGraph: {
     title: "PayFlares - Sparking Creator Success, Fueling Fan Engagement",
     description: "Empower your favorite creators and engage with brands in meaningful ways through PayFlares' innovative platform for micro-transactions.",
@@ -39,20 +44,13 @@ export const metadata = {
     description: "Support creators, earn rewards, and interact with brands in fun ways on PayFlares.",
     images: ["/logo.png"],
   },
-  structuredData: {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "PayFlares",
-    "url": "https://payflares.com",
-    "logo": "https://payflares.com/logo.png",
-    "description": "A platform to support creators, engage with fans, and reward brand interactions through micro-transactions.",
-    "sameAs": [
-      "https://www.facebook.com/PayFlares",
-      "https://www.twitter.com/PayFlares",
-      "https://www.instagram.com/PayFlares",
-      "https://www.linkedin.com/company/PayFlares"
-    ]
-  }
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+
+
 };
 
 
@@ -64,7 +62,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script
           async
