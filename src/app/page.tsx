@@ -38,7 +38,7 @@ export default function Home() {
           PayFlares
         </h1>
         <p className="text-xl md:text-2xl mb-20 text-green-300">
-          The Revolution of Easy, Fast & Secure Global Transactions <br /> Powered by the BlockChain
+          Sparking The Creators, Igniting the Brands with Micro-Payments.
         </p>
         <Countdown
           date={countdownDate}
